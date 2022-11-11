@@ -16,6 +16,7 @@ class Board extends React.Component {
         super(props);
         this.state = {
             squares: Array(9).fill(null),
+            xIsNext: true,
         };
     }
 
@@ -24,8 +25,11 @@ class Board extends React.Component {
         // .slice() to create a copy of the squares array 
         // to modify instead of modifying the existing array
         // IMMUTABILITY
-        squares[i] = 'X';
-        this.setState({squares: squares});
+        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        this.setState({
+            squares: squares,
+            xIsNext: !this.state.xIsNext,
+        });
     }
 
     renderSquare(i) {
