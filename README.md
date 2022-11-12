@@ -22,6 +22,10 @@ del *
 cd ..
 ```
 3. Add the two files from this repository into the src/ folder.
+```
+index.js
+index.css
+```
 4. Run:
 ```
 npm start
