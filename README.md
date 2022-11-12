@@ -16,7 +16,7 @@ cd src
 # Mac or Linux:
 rm -f *
 
-# Windows:
+# Or, Windows:
 del *
 
 cd ..
